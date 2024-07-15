@@ -1,0 +1,28 @@
+{
+  "name": "course-node",
+  "version": "1.0.0",
+  "description": "Curso de node-js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuaniPucheta/Course-NodeJS.git"
+  },
+  "keywords": [
+    "course",
+    "node",
+    "nodejs",
+    "jip"
+  ],
+  "author": "Juan Ignacio Pucheta - JIP",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuaniPucheta/Course-NodeJS/issues"
+  },
+  "homepage": "https://github.com/JuaniPucheta/Course-NodeJS#readme",
+  "dependencies": {
+    "picocolors": "^1.0.1"
+  }
+}
