@@ -3,13 +3,12 @@
 // argumentos de entrada
 console.log(process.argv)
 
-
 // controlar el proceso y su salida
-    //* process.exit(1)
+//* process.exit(1)
 
 // podemos controalar eventos del proceso
 process.on('exit', () => {
-    console.log('El proceso terminó')
+  console.log('El proceso terminó')
 })
 
 // current working directory
