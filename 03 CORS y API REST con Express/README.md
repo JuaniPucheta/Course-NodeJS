@@ -43,6 +43,13 @@ Cada petición que se hace al servidor debe contener toda la información necesa
 ## Separación de conceptos
 Permite que el cliente y el servidor evolucionen de forma independiente.
 
-## Idempotencia
+## CORS
+Cross-Origin Resource Sharing. Es un mecanismo que utiliza cabeceras *HTTP* adicionales para permitir que un servidor autorice a un sitio web a acceder a sus recursos. Es un mecanismo de seguridad que permite que un navegador web pueda hacer peticiones a un servidor que no sea el mismo que sirvió la página web.
+
+## Cuestiones de codigo...
+### Idempotencia
 Propiedad de realizar una acción determinada varias veces y aún así conseguir siempre el mismo resultado que se obtendría al hacerlo una vez.
 Habla también del estado interno que pueden tener las cosas.
+
+### `npx servor ./web`
+Para servir archivos estáticos. 
