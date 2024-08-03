@@ -1,5 +1,5 @@
 {
-  "name": "04-cors-y-api-rest-con-express",
+  "name": "04-mvc-y-despliegue-api-rest",
   "version": "1.0.0",
   "main": "app.js",
   "type": "module",
