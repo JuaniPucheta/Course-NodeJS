@@ -17,3 +17,12 @@ Para convertir a ESModules, en el package.json:
   "type": "module"
 }
 ```
+
+## MODELO
+La lógica de negocio de la aplicación.
+
+## CONTROLADOR 
+Orquestador. Actua como intermediario entre el modelo y la vista.
+
+## VISTA
+Interfaz de usuario.

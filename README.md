@@ -5,8 +5,7 @@
 Curso para aprender **Node** de forma práctica 🤓
 </div>
 
-## Contenido
-
+## Contenidow
 - 01: [Introducción a Node.js y módulos](https://github.com/JuaniPucheta/Course-NodeJS/tree/main/01%20Introduccion%20y%20primeros%20pasos)
 - 02: [Creamos una API desde cero](https://github.com/JuaniPucheta/Course-NodeJS/tree/main/02%20API%20con%20Express%20desde%20cero)
 - 03: Solución de CORS y desarrollo de API
@@ -14,6 +13,18 @@ Curso para aprender **Node** de forma práctica 🤓
 - 05: Crea un Base de Datos MySQL y evita los hackers (buenas prácticas)
 - 06: Chat en TIEMPO REAL con Node.js, Socket.io, SQL, HTML y CSS
 - 07: [Aprende Autenticación de Usuario, Sesión, Cookies y JWT con Node.js](https://github.com/JuaniPucheta/Course-NodeJS/tree/main/07%20Auth%20user%2C%20session%2C%20cookies%20y%20jwt)
+
+### Criterio para los commits
+- *feat*: Una nueva característica para el usuario.
+- *fix*: Arregla un bug que afecta al usuario.
+- *perf*: Cambios que mejoran el rendimiento del sitio.
+- *build*: Cambios en el sistema de build, tareas de despliegue o instalación.
+- *ci*: Cambios en la integración continua.
+- *docs*: Cambios en la documentación.
+- *refactor*: Refactorización del código como cambios de nombre de variables o funciones.
+- *style*: Cambios de formato, tabulaciones, espacios o puntos y coma, etc; no afectan al usuario.
+- *test*: Añade tests o refactoriza uno existente.
+- *try*: Intentando que funcione pero todavía no funciona :p
 
 <!-- hacer un creditos -->
 #### Creditos 🤓
