@@ -1,0 +1,24 @@
+{
+  "name": "04-mvc-y-despliegue-api-rest",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev:1": "nodemon app.js",
+    "start": "node --watch app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Para desplegarlo, esperar aceptación de *fl0* en *https://www.fl0.com/*\r - Documentación: [https://docs.fl0.com/docs/getting-started/express/]",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "^4.19.2",
+    "mongodb": "6.8.0",
+    "mysql2": "^3.11.0",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
