@@ -1,6 +1,7 @@
 import express, { json } from 'express' // require -> commonJS
 import { moviesRouter } from './routes/movies.js'
 import { corsMiddleware } from './middlewares/cors.js'
+import bodyParser from 'body-parser'
 
 // EN EL FUTURO: el import del jsons será así:
 // import movies from './movies.json' with { type: 'json' }
@@ -12,6 +13,7 @@ import { corsMiddleware } from './middlewares/cors.js'
 const app = express()
 app.use(json())
 app.use(corsMiddleware())
+app.use(bodyParser.json())
 app.disable('x-powered-by') // deshabilitar el header X-Powered-By: Express
 
 // métodos normales: GET/HEAD/POST

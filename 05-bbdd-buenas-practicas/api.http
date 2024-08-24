@@ -2,7 +2,7 @@
 GET http://localhost:3000/movies
 
 ###? Recuperar una pelicula por id
-GET http://localhost:3000/movies/8c18623e-5e83-11ef-b46e-d85ed35a1edc
+GET http://localhost:3000/movies/f462239c-6242-11ef-bebb-d85ed35a1edc
 
 ###? Recuperar todas las peliculas por un genero
 GET http://localhost:3000/movies?genre=ACTION
@@ -13,24 +13,25 @@ Content-Type: application/json
 
 {
     "sql": "SELECT * FROM movies",
-    "title": "The Godfather",
+    "title": "El Padrino",
     "year": 1975,
     "director": "Francis Ford Coppola",
     "duration": 175,
     "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
     "genre": [
         "Crime", 
-        "Drama"
+        "Drama",
+        "Action"
     ]
 }
 
 ###? Borrar una pelicula
-DELETE http://localhost:3000/movies/6435d025-56bc-455d-81c9-001d1a6520c1
+DELETE http://localhost:3000/movies/cd3f5b76-6243-11ef-bebb-d85ed35a1edc
 
 ###? Actualizar una pelicula
-PATCH http://localhost:3000/movies/0aa85478-d7c4-4d08-8a2b-1cfe5f2b4757
+PATCH http://localhost:3000/movies/45722f03-6244-11ef-bebb-d85ed35a1edc
 Content-Type: application/json
 
 {
-    "year": 1900
+    "year": 2000
 }

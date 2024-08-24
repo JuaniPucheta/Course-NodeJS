@@ -21,44 +21,57 @@ export class MovieController {
     }
 
     static async create (req, res) {
-        const result = validateMovie(req.body)
-    
-        if (!result.success) {
-          // 422 Unprocessable Entity
-          return res.status(400).json({ error: JSON.parse(result.error.message) })
-        }
-    
-        const newMovie = await MovieModel.create(result.data)
-      
-        res.status(201).json(newMovie)
-    }
+      console.log('Request body en el controlador:', req.body); // Log the request body
 
-    static async delete (req, res) {
-        const { id } = req.params
-        
-        const result = await MovieModel.delete({ id })
-      
-        if (!result) {
-          return res.status(404).json({ message: 'Movie not found' })
+      const result = validateMovie(req.body)
+  
+      if (!result.success) {
+        // 422 Unprocessable Entity
+        return res.status(400).json({ error: JSON.parse(result.error.message) })
+      }
+
+      console.log('Validando...:', result.data); // Log the validated data
+  
+      try {
+          const newMovie = await MovieModel.create(result.data) // Pass the validated data
+          res.status(201).json(newMovie)
+      } catch (e) {
+          console.error('Error creating movie:', e.message);
+          res.status(500).json({ error: e.message });
+      }
+  }
+
+    static async delete(req, res) {
+        const { id } = req.params;
+
+        try {
+            await MovieModel.delete({ id });
+            res.status(200).json({ message: "Pelicula eliminada correctamente" }); // Enviando respuesta al cliente
+        } catch (e) {
+            console.error('Error al eliminar la pelicula:', e.message);
+            res.status(500).json({ error: e.message });
         }
-        
-        return res.status(204).end()
     }
 
     static async update (req, res) {
-        const result = validatePartialMovie(req.body)
-    
-        if (!result.success) {
+      const result = validatePartialMovie(req.body)
+
+      if (!result.success) {
           return res.status(400).json({ error: JSON.parse(result.error.message) })
-        }
-      
-        const { id } = req.params
-        const updateMovie = await MovieModel.update({ id, input: result.data })
-    
-        if (!updateMovie) {
-          return res.status(404).json({ message: 'Movie not found' })
-        }
-    
-        return res.json(updateMovie)
-    }
+      }
+
+      const { id } = req.params
+      try {
+          const updatedMovie = await MovieModel.update({ id, input: result.data })
+
+          if (!updatedMovie) {
+              return res.status(404).json({ message: 'Pelicula no encontrada' })
+          }
+
+          return res.json(updatedMovie)
+      } catch (e) {
+          console.error('Error al actualizar la pelicula:', e.message)
+          return res.status(500).json({ error: e.message })
+      }
+  }
 }
