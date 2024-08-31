@@ -1,31 +1,21 @@
 import express, { json } from 'express' // require -> commonJS
-import { moviesRouter } from './routes/movies.js'
+import { createMovieRouter } from './routes/movies.js'
 import { corsMiddleware } from './middlewares/cors.js'
 import bodyParser from 'body-parser'
+import 'dotenv/config'
 
-// EN EL FUTURO: el import del jsons será así:
-// import movies from './movies.json' with { type: 'json' }
-
-// ❌ COMO LEER UN JSON EN ESModules (mucho mas lenta)
-// import fs from 'node:fs'
-// const movies = JSON.parse(fs.readFileSync('./movies.json', 'utf-8'))
-
-const app = express()
-app.use(json())
-app.use(corsMiddleware())
-app.use(bodyParser.json())
-app.disable('x-powered-by') // deshabilitar el header X-Powered-By: Express
-
-// métodos normales: GET/HEAD/POST
-// métodos complejos: PUT/PATCH/DELETE
-
-// CORS PRE-Flight
-// OPTIONS
-
-app.use('/movies', moviesRouter)
-
-const PORT = process.env.PORT ?? 3000
-
-app.listen(PORT, () => {
-  console.log(`✅ Corriendo en  http://localhost:${PORT}`)
-})
+export const createApp = ({ movieModel }) => {
+  const app = express()
+    app.use(json())
+    app.use(corsMiddleware())
+    app.use(bodyParser.json())
+    app.disable('x-powered-by') // deshabilitar el header X-Powered-By: Express
+  
+  app.use('/movies', createMovieRouter({ movieModel }))
+  
+  const PORT = process.env.PORT ?? 3000
+  
+  app.listen(PORT, () => {
+    console.log(`✅ Corriendo en  http://localhost:${PORT}`)
+  })
+}
