@@ -10,7 +10,7 @@ Curso para aprender **Node** de forma práctica 🤓
 - 02: [Creamos una API desde cero](https://github.com/JuaniPucheta/Course-NodeJS/tree/main/02-API-con-Express-desde-cero)
 - 03: [Solución de CORS y desarrollo de API](https://github.com/JuaniPucheta/Course-NodeJS/tree/main/03-CORS-y-API-REST-con-Express)
 - 04: [Arquitectura MVC y despligue de API](https://github.com/JuaniPucheta/Course-NodeJS/tree/main/04-MVC-y-Despliegue-API-REST)
-- 05: Crea un Base de Datos MySQL y evita los hackers (buenas prácticas)
+- 05: [Crea un Base de Datos MySQL y evitar inyecciones](https://github.com/JuaniPucheta/Course-NodeJS/tree/main/05-bbdd-buenas-practicas)
 - 06: Chat en TIEMPO REAL con Node.js, Socket.io, SQL, HTML y CSS
 - 07: [Aprende Autenticación de Usuario, Sesión, Cookies y JWT con Node.js](https://github.com/JuaniPucheta/Course-NodeJS/tree/main/07%20Auth%20user%2C%20session%2C%20cookies%20y%20jwt)
 
